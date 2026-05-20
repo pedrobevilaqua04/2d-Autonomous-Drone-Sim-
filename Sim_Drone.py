@@ -255,4 +255,5 @@ while posicao_x != 20: #Realizar leitura de sensores e movimentos enquanto o dro
     ver_mov_front()
 dar_mortal()
 land()
+print("Gerando gráficos de variação de altura...")
 graficos()
