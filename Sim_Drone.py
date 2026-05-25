@@ -1,5 +1,5 @@
 from myClasses import Drone
-#import plotext as plt # pyright: ignore[reportMissingImports]
+import plotext as plt # pyright: ignore[reportMissingImports]
 
 # Simulador de Drone para primeira capacitação
 # Simulador com  interface 2d, dois sensores Lidar, um sensor de posição e com potencias dos motores
@@ -209,19 +209,19 @@ for i in range(0, 10):
 #     print("Simulação finalizada.")
 #     input("Pressione Enter para finalizar...")
 
-# def graficos():
-#     global variacao_altura, variacao_sensor_altura, tempo
-#     plt.plot(tempo, variacao_altura)
-#     plt.title("Variação de Altura do Drone ao Longo do Tempo")
-#     plt.xlabel("Tempo (s)")
-#     plt.ylabel("Altura (m)")
-#     plt.show()
+def graficos():
+    global variacao_altura, variacao_sensor_altura, tempo
+    plt.plot(tempo, variacao_altura)
+    plt.title("Variação de Altura do Drone ao Longo do Tempo")
+    plt.xlabel("Tempo (s)")
+    plt.ylabel("Altura (m)")
+    plt.show()
 
-#     plt.plot(tempo, variacao_sensor_altura)
-#     plt.title("Variação do Sensor de Altura do Drone ao Longo do Tempo")
-#     plt.xlabel("Tempo (s)")
-#     plt.ylabel("Altura do Sensor (m)")
-#     plt.show()
+    plt.plot(tempo, variacao_sensor_altura)
+    plt.title("Variação do Sensor de Altura do Drone ao Longo do Tempo")
+    plt.xlabel("Tempo (s)")
+    plt.ylabel("Altura do Sensor (m)")
+    plt.show()
 
 def dar_mortal():
 
@@ -248,4 +248,4 @@ while drone.posicao_x != 20: #Realizar leitura de sensores e movimentos enquanto
 dar_mortal()
 drone.land(mapa, variacao_altura, variacao_sensor_altura)
 print("Gerando gráficos de variação de altura...")
-#graficos()
+graficos()
